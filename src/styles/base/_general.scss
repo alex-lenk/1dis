@@ -1,0 +1,195 @@
+h1, .h1, h2, .h2, h3, .h3,
+h4, .h4, h5, .h5, h6, .h6 {
+  color: $black;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+h1, .h1 {
+  font-size: 20px;
+}
+
+h2, .h2 {
+  font-size: 19px;
+}
+
+h3, .h3 {
+  font-size: 18px;
+}
+
+h4, .h4 {
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.lazy {
+   opacity: 0;
+ }
+
+a:focus {
+  outline: none;
+}
+
+.section-block {
+  margin-bottom: 50px;
+}
+
+.section-content {
+  .h1, .h2, h1, h2 {
+    padding-top: 10px;
+  }
+
+  .h3, .h4, .h5, .h6,
+  h3, h4, h5, h6 {
+    padding-top: .7rem;
+  }
+
+  a {
+    color: $black;
+    text-decoration: underline;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.section-title {
+  font-weight: 500;
+  color: $black;
+}
+
+.text-bold {
+  font-weight: 500;
+  color: $black;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-red {
+  color: $red;
+}
+
+.d-none {
+  display: none;
+}
+
+.list-line {
+  padding-left: 0;
+  list-style: none;
+
+  li::before {
+    content: '– ';
+  }
+}
+
+.list-unstyled {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* Component link-decor */
+
+.link-decor {
+  line-height: 1;
+  position: relative;
+  transition: color .4s ease;
+
+  &::after {
+    width: 0;
+    height: 1px;
+    background-color: $red;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: width .4s ease;
+    content: '';
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+/* END */
+
+@media (min-width: 576px) {
+  h1, .h1, h2, .h2, h3, .h3,
+  h4, .h4, h5, .h5, h6, .h6 {
+    margin-bottom: .8rem;
+    line-height: 1.4;
+  }
+  h1, .h1 {
+    font-size: 36px;
+  }
+
+  h2, .h2 {
+    font-size: 25px;
+  }
+
+  h3, .h3 {
+    font-size: 24px;
+  }
+
+  h4, .h4 {
+    font-size: 20px;
+  }
+
+  .section-block {
+    margin-bottom: 90px;
+  }
+  .section-title {
+    margin-bottom: 5px;
+    font-size: 38px;
+  }
+
+  .section-content {
+    .h3, .h4, .h5, .h6,
+    h3, h4, h5, h6 {
+      padding-top: 1rem;
+    }
+  }
+  .media-wrap {
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hide-to-sm {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 374px) {
+  .section-title {
+    font-size: 18px;
+  }
+}

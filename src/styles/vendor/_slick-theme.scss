@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+// Default Variables
+
+// Slick icon entity codes outputs the following
+// "\2190" outputs ascii character "←"
+// "\2192" outputs ascii character "→"
+// "\2022" outputs ascii character "•"
+
+$slick-loader-path: "./" !default;
+$slick-arrow-color: white !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-prev-character: "\2190" !default;
+$slick-next-character: "\2192" !default;
+$slick-dot-character: "\2022" !default;
+$slick-dot-size: 6px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+
+@function slick-image-url($url) {
+    @if function-exists(image-url) {
+        @return image-url($url);
+    }
+    @else {
+        @return url($slick-loader-path + $url);
+    }
+}
+
+/* Slider */
+
+.slick-list {
+    .slick-loading & {
+        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+    }
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    &:hover, &:focus {
+        outline: none;
+        background: transparent;
+        color: transparent;
+    }
+}
+
+.slick-prev {
+    left: -25px;
+}
+
+.slick-next {
+    right: -25px;
+}
+
+/* Dots */
+
+.slick-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+
+    li {
+        position: relative;
+        display: inline-block;
+        height: 11px;
+        width: 11px;
+        border: 1px solid $gray-800;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+        transition: border-color .3s, background-color .3s;
+
+        button {
+            border: 0;
+            background: transparent;
+            display: block;
+            outline: none;
+            line-height: 0;
+            font-size: 0;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &.slick-active {
+            background-color: $gray-800;
+        }
+
+        &:not(.slick-active):hover {
+            border-color: $red;
+            background-color: $red;
+        }
+    }
+}

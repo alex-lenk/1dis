@@ -1,0 +1,222 @@
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+@import "bootstrap/reboot";
+@import "bootstrap/utilities/screenreaders";
+@import "bootstrap/transitions";
+@import "bootstrap/forms";
+
+@import "bootstrap/modal";
+@import "bootstrap/close";
+
+@import "bootstrap/grid";
+//@import "bootstrap/utilities/display";
+//@import "bootstrap/utilities/flex";
+//@import "bootstrap/utilities/spacing";
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1170px
+);
+
+// Single container class with breakpoint max-widths
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+
+.row {
+  @include make-row();
+}
+
+// Remove the negative margin from default .row, then the horizontal padding
+// from all immediate children columns (to prevent runaway style inheritance).
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns();
+
+
+//
+// Base styles
+// @import "bootstrap/buttons";
+
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  color: $white;
+  text-align: center;
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+
+  @include hover() {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+
+.form-control {
+  color: $black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.close {
+  margin-left: auto;
+  background-color: transparent;
+  text-align: center;
+  position: absolute;
+  overflow: hidden;
+  top: 20px;
+  right: 19px;
+  opacity: 1;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    transition: opacity .4s;
+  }
+
+  &::after {
+    background: #fff;
+  }
+
+  &::before {
+    background: linear-gradient(180deg, #D6D6D6 0%, #C4C4C4 100%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+  }
+}
+
+@media (min-width: 576px) {
+  .close {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 7px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+    transition: box-shadow .4s;
+
+    &:hover {
+      color: #fff;
+      box-shadow: none;
+
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .row {
+    margin-left: -7px;
+    margin-right: -7px;
+  }
+
+  .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto,
+  .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
+  .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2,
+  .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1,
+  .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8,
+  .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4,
+  .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+}
+
+@media (max-width: 575px) {
+  .close {
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    font-size: 12px;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
