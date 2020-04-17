@@ -1,63 +1,62 @@
 // Color system
-$gray: #d6d6d6;
-$gray2: #c4c4c4;
-$gray-400: #fbfbfb;
-$gray-500: #f5f5f5;
-$gray-600: #848484;
-$gray-700: #eee;
-$gray-800: #bbb;
-$gray-900: #666;
-$black: #2d2d2d;
-$black2: #262626;
-$black3: #494949;
-$pink: #f9a1aa;
-$red: #9b0030;
-$red2: #cf0040;
+$gray-800: #d8d7d8;
+$gray-900: #9d9a9d;
+$black: #303030;
 $orange: #ff6921;
-$orange2: #d74600;
-$yellow: #f4ec19;
-$secondary: $black3;
 
 
 // Typography
 $font-family-sans-serif: 'PTSans', Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$link-hover-color: $red;
+
 
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-grid-classes: false;
 
 
 // Allows for customizing button radius independently from global border radius
-//$btn-border-radius: 7px;
 $btn-font-weight: 400;
+$btn-font-size: 13;
+
 
 // Forms
-$border-radius: 7px;
-$input-height: 40px;
+$border-radius: 0;
+$input-height: 34px;
 $input-font-size: 14px;
-$form-group-margin-bottom: 18px;
+$form-group-margin-bottom: 15px;
 $input-focus-box-shadow: none;
-$input-border-width: 0;
+$input-border-width: 1px;
 $btn-disabled-opacity: .5;
+$input-color: $black;
+$input-border-color: $gray-800;
+
 
 // Actual modal
 $modal-content-border-radius: 10px;
-$modal-content-bg: $gray-400;
+$modal-content-bg: $gray-900;
 $modal-content-box-shadow-xs: 0 0 7px rgba(0, 0, 0, 0.25);
 
 
 // Close
-
 $close-font-size: 16px;
 $close-font-weight: 400;
-$close-color: $gray-800;
+$close-color: $gray-900;
 $close-text-shadow: none;
-
-// Custom
-$custom-box-shadow: 0 0 10px rgba(#454a71, .4);
 
 
 // Components
 //
 // Define common padding and border radius sizes and more.
 $transition-collapse: height .5s ease;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-color: $black;
+
+
+// Links
+//
+// Style anchor elements.
+$link-hover-color: $orange;
+$link-hover-decoration: none;

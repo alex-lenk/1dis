@@ -1,15 +1,12 @@
 @import "bootstrap/functions";
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
-
 @import "bootstrap/reboot";
 @import "bootstrap/utilities/screenreaders";
 @import "bootstrap/transitions";
 @import "bootstrap/forms";
-
 @import "bootstrap/modal";
 @import "bootstrap/close";
-
 @import "bootstrap/grid";
 //@import "bootstrap/utilities/display";
 //@import "bootstrap/utilities/flex";
@@ -105,14 +102,8 @@ $container-max-widths: (
   }
 }
 
-.form-control {
-  color: $black;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-
-  &:focus {
-    outline: none;
-  }
+.form-control:focus {
+  outline: none;
 }
 
 .close {

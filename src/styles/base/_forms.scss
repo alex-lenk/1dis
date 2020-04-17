@@ -15,31 +15,19 @@
 }
 
 .form-group-prepend {
-  width: 25%;
-  margin-right: 3%;
-  padding-right: 15px;
   position: relative;
-
-  &::after {
-    color: $red;
-    font-size: 14px;
-    position: absolute;
-    top: 14px;
-    right: 0;
-    content: '*';
-  }
 }
 
 .form-group-prepend__field {
-  padding-left: 34px;
+  padding-left: 40px;
 }
 
 .form-group-prepend__icon {
-  width: 15px;
-  height: 15px;
-  margin-top: -8px;
+  width: 19px;
+  height: 19px;
+  margin-top: -9px;
   top: 50%;
-  left: 13px;
+  left: 10px;
   position: absolute;
   fill: $gray-900;
 }
