@@ -1,0 +1,36 @@
+.services {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.services-item:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+
+.services-link {
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 46px;
+  background-color: $orange;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  transition: background-color .4s;
+
+  &:hover {
+    color: #fff;
+    background-color: $gray-900;
+  }
+}
+
+.services-icon {
+  width: 17px;
+  height: 17px;
+  margin-right: 9px;
+  fill: #fff;
+  flex: none;
+}
