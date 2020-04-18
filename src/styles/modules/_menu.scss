@@ -1,0 +1,33 @@
+.menu {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: $orange;
+  text-align: center;
+  display: flex;
+}
+
+.menu-item {
+  color: #fff;
+  border-right: 1px solid;
+  flex-grow: 1;
+
+  &:not(:last-child) {
+    border-right-color: transparent;
+  }
+}
+
+.menu-link {
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color .4s;
+
+  &:hover {
+    color: #fff;
+    background-color: $gray-900;
+  }
+}
