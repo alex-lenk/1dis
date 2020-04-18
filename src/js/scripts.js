@@ -21,14 +21,14 @@ $(document).ready(function () {
 
     $('.menu-toggle').click(function () {
         $('body').toggleClass('menu-opened');
-        //$('.menu-nav__inner').toggleClass('menu-nav__inner-open');
     });
 });
 
 new Glider(document.querySelector('.main-info-slider__init'), {
     slidesToShow: 1,
+    slidesToScroll: 1,
+    scrollLock: true,
     dots: '.main-info-slider__dots',
-    draggable: true,
     arrows: {
         prev: '.main-info-slider__prev',
         next: '.main-info-slider__next'
