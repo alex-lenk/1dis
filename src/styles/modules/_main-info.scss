@@ -2,13 +2,6 @@
   padding: 15px 15px 0;
   margin-bottom: 10px;
   background-color: #fff;
-  display: flex;
-}
-
-.main-info-slider {
-  margin-right: 30px;
-  max-width: 75%;
-  flex-basis: 75%;
 }
 
 .main-info-slider__control {
@@ -61,4 +54,26 @@
 
 .main-info-slider__next::before {
   transform: rotate(-135deg);
+}
+
+@media (min-width: 992px) {
+  .main-info {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-info-slider {
+    margin-right: 30px;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-info-slider {
+    margin-right: 15px;
+    max-width: 73%;
+    flex-basis: 73%;
+  }
 }

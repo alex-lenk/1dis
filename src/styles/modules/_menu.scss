@@ -4,16 +4,15 @@
   list-style: none;
   background-color: $orange;
   text-align: center;
-  display: flex;
 }
 
 .menu-item {
   color: #fff;
-  border-right: 1px solid;
+  border-right: 1px solid transparent;
   flex-grow: 1;
 
   &:not(:last-child) {
-    border-right-color: transparent;
+    border-right-color: #fff;
   }
 }
 
@@ -22,12 +21,39 @@
   line-height: 40px;
   display: block;
   text-transform: uppercase;
-  font-size: 14px;
   font-weight: 700;
   transition: background-color .4s;
 
   &:hover {
     color: #fff;
     background-color: $gray-900;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: flex;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu-link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
   }
 }

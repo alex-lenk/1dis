@@ -1,25 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Курсы дизайна интерьера</title>
+    <meta name="description" content="Курсы дизайна интерьера">
+
+    <link rel="stylesheet" href="css/styles.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+@@container
 <header class="header">
-    <div class="header-inner container">
-        <div class="menu-toggle">
-            <svg class="menu-toggle__icon">
-                <use xlink:href="img/icons.svg#toggle"></use>
-            </svg>
-            <svg class="menu-toggle__close">
-                <use xlink:href="img/icons.svg#close"></use>
-            </svg>
+    <a href="/" class="header-logo">
+        <img src="img/logo.png" class="header-logo__media" alt="">
+        <span class="header-logo__title">Школа дизайна интерьера</span>
+        <span class="header-logo__text">Российский Государственный Университет <br> им. А.Н. Косыгина</span>
+    </a>
+    <div class="header-info">
+        <div class="header-toggle">Меню</div>
+
+        <div class="header-support">
+            <div class="header-support__contact">
+                <a href="tel:+74952011300" class="header-support__contact-phone" rel="nofollow"><span class="header-support__contact-phone--code">+7
+                    (495)</span> <span class="text-bold">201-13-00</span></a>
+                <div class="header-support__contact-address">г. Москва, Садовническая ул. 33</div>
+            </div>
+            <div class="header-social">
+                <a href="#" class="header-social__item header-social__item-youtube" rel="nofollow" target="_blank">
+                    <svg class="header-social__icon">
+                        <use xlink:href="img/icons.svg#youtube"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header-social__item header-social__item-facebook" rel="nofollow" target="_blank">
+                    <svg class="header-social__icon">
+                        <use xlink:href="img/icons.svg#facebook"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header-social__item header-social__item-instagram" rel="nofollow" target="_blank">
+                    <svg class="header-social__icon">
+                        <use xlink:href="img/icons.svg#instagram"></use>
+                    </svg>
+                </a>
+            </div>
         </div>
-        <a href="/" class="header-logo"><img src="img/logo.svg" alt="Alianta group"></a>
-        <ul class="menu">
-            <li class="menu-item"><a href="#" class="menu-link">Логистика</a></li>
-            <li class="menu-item"><a href="#" class="menu-link">Дистрибуция</a></li>
-            <li class="menu-item"><a href="#" class="menu-link">О компании</a></li>
-            <li class="menu-item"><a href="#" class="menu-link">Контакты</a></li>
-        </ul>
-        <a href="tel:+74956519080" class="header-phone link-decor" rel="nofollow">
-            <svg class="header-phone__icon">
-                <use xlink:href="img/icons.svg#phone"></use>
-            </svg>
-            <span class="header-phone__text">+7 (495) 651 90 80</span>
-        </a>
+        <form class="header-form call-form">
+            <div class="header-form__group form-group-prepend">
+                <label class="sr-only" for="call-form__name">Ваше имя</label>
+                <svg class="form-group-prepend__icon">
+                    <use xlink:href="img/icons.svg#user"></use>
+                </svg>
+                <input type="text" id="call-form__name"
+                       class="form-group-prepend__field form-control hide-placeholder" placeholder="Представтесь" required>
+                <div class="invalid-feedback">Введите ваше имя</div>
+            </div>
+
+            <div class="header-form__group form-group-prepend">
+                <label class="sr-only" for="call-form__tel">Контактный телефон*</label>
+                <svg class="form-group-prepend__icon">
+                    <use xlink:href="img/icons.svg#phone"></use>
+                </svg>
+                <input type="tel" id="call-form__tel" class="form-group-prepend__field form-control hide-placeholder tel" placeholder="+7 (___) ___-__-__" required>
+                <div class="invalid-feedback">Заполните номер телефона</div>
+            </div>
+
+            <button type="button" class="header-form__btn btn-primary btn">ЖДУ ЗВОНКА</button>
+        </form>
     </div>
 </header>
+<ul class="menu">
+    <li class="menu-item"><a href="#" class="menu-link">О школе</a></li>
+    <li class="menu-item"><a href="#" class="menu-link">Очное обучение</a></li>
+    <li class="menu-item"><a href="#" class="menu-link">Дистанционное обучение</a></li>
+    <li class="menu-item"><a href="#" class="menu-link">Трудоустройство</a></li>
+    <li class="menu-item"><a href="#" class="menu-link">Мастер-классы</a></li>
+    <li class="menu-item"><a href="#" class="menu-link">Контакты</a></li>
+</ul>

@@ -1,88 +1,6 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Курсы дизайна интерьера</title>
-    <meta name="description" content="Курсы дизайна интерьера">
-
-    <link rel="stylesheet" href="css/styles.min.css">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-</head>
-<body>
-<div class="container">
-    <header class="header">
-        <a href="/" class="header-logo">
-            <img src="img/logo.png" class="header-logo__media" alt="">
-            <span class="header-logo__title">Школа дизайна интерьера</span>
-            <span class="header-logo__text">Российский Государственный Университет <br> им. А.Н. Косыгина</span>
-        </a>
-        <div class="header-info">
-            <div class="header-support">
-                <div class="header-support__contact">
-                    <a href="tel:+74952011300" class="header-support__contact-phone" rel="nofollow"><span class="header-support__contact-phone--code">+7
-                        (495)</span> <span class="text-bold">201-13-00</span></a>
-                    <div class="header-support__contact-address">г. Москва, Садовническая ул. 33</div>
-                </div>
-                <div class="header-social">
-                    <a href="#" class="header-social__item header-social__item-youtube" rel="nofollow" target="_blank">
-                        <svg class="header-social__icon">
-                            <use xlink:href="img/icons.svg#youtube"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="header-social__item header-social__item-facebook" rel="nofollow" target="_blank">
-                        <svg class="header-social__icon">
-                            <use xlink:href="img/icons.svg#facebook"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="header-social__item header-social__item-instagram" rel="nofollow" target="_blank">
-                        <svg class="header-social__icon">
-                            <use xlink:href="img/icons.svg#instagram"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <form class="header-form call-form">
-                <div class="header-form__group form-group-prepend">
-                    <label class="sr-only" for="call-form__name">Ваше имя</label>
-                    <svg class="form-group-prepend__icon">
-                        <use xlink:href="img/icons.svg#user"></use>
-                    </svg>
-                    <input type="text" id="call-form__name" class="form-group-prepend__field form-control hide-placeholder" placeholder="Представтесь" required>
-                    <div class="invalid-feedback">Введите ваше имя</div>
-                </div>
-
-                <div class="header-form__group form-group-prepend">
-                    <label class="sr-only" for="call-form__tel">Контактный телефон*</label>
-                    <svg class="form-group-prepend__icon">
-                        <use xlink:href="img/icons.svg#phone"></use>
-                    </svg>
-                    <input type="tel" id="call-form__tel" class="form-group-prepend__field form-control hide-placeholder" placeholder="+7 (___) ___-__-__" required>
-                    <div class="invalid-feedback">Заполните номер телефона</div>
-                </div>
-
-                <button type="button" class="header-form__btn btn-primary btn">ЖДУ ЗВОНКА</button>
-            </form>
-        </div>
-    </header>
-    <ul class="menu">
-        <li class="menu-item"><a href="#" class="menu-link">О школе</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Очное обучение</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Дистанционное обучение</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Трудоустройство</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Мастер-классы</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Контакты</a></li>
-    </ul>
+@@include("blocks/header.html", {
+"container": "<div class='container'>"
+})
 
     <div class="main-info">
         <div class="main-info-slider">
@@ -120,7 +38,7 @@
         </div>
         <ul class="services">
             <li class="services-item">
-                <a href="/kursy_dizayna_interyera" class="services-link">
+                <a href="#" class="services-link">
                     <svg class="services-icon">
                         <use xlink:href="img/icons.svg#education"></use>
                     </svg>
@@ -128,7 +46,7 @@
                 </a>
             </li>
             <li class="services-item">
-                <a href="/kursy_dizayna_interyera_mebeli" class="services-link">
+                <a href="#" class="services-link">
                     <svg class="services-icon">
                         <use xlink:href="img/icons.svg#education"></use>
                     </svg>
@@ -144,7 +62,7 @@
                 </a>
             </li>
             <li class="services-item">
-                <a href="/kursy_dizayner_dekorator" class="services-link">
+                <a href="#" class="services-link">
                     <svg class="services-icon">
                         <use xlink:href="img/icons.svg#education"></use>
                     </svg>
@@ -152,7 +70,7 @@
                 </a>
             </li>
             <li class="services-item">
-                <a href="/kursy_dizayner_oformitel" class="services-link">
+                <a href="#" class="services-link">
                     <svg class="services-icon">
                         <use xlink:href="img/icons.svg#education"></use>
                     </svg>
@@ -160,7 +78,7 @@
                 </a>
             </li>
             <li class="services-item">
-                <a href="/kursy_keramiki" class="services-link">
+                <a href="#" class="services-link">
                     <svg class="services-icon">
                         <use xlink:href="img/icons.svg#education"></use>
                     </svg>
@@ -225,72 +143,5 @@
         <p>Всех наших выпускников мы&nbsp;приглашаем бесплатно посещать мастер-классы от&nbsp;ведущих компании по&nbsp;покрытиям, отделочным материалам, электрике и&nbsp;домашнему оборудованию.</p>
     </article>
 
-    <footer class="footer">
-        <div class="footer-top">
-            <ul class="footer-social">
-                <li class="footer-social__item">
-                    <a href="#" class="footer-social__link">
-                        <svg class="footer-social__icon footer-social__icon-youtube">
-                            <use xlink:href="img/icons.svg#youtube"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="footer-social__item">
-                    <a href="#" class="footer-social__link">
-                        <svg class="footer-social__icon footer-social__icon-facebook">
-                            <use xlink:href="img/icons.svg#facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="footer-social__item">
-                    <a href="#" class="footer-social__link">
-                        <svg class="footer-social__icon footer-social__icon-instagram">
-                            <use xlink:href="img/icons.svg#instagram"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-
-            <form action="/" class="form-subscribe">
-                <div class="form-group-prepend">
-                    <label class="sr-only" for="call-form__email">Ваш e-mail</label>
-                    <svg class="form-group-prepend__icon">
-                        <use xlink:href="img/icons.svg#email"></use>
-                    </svg>
-                    <input type="text" id="call-form__email"
-                           class="form-group-prepend__field form-control hide-placeholder" placeholder="Введите e-mail" required>
-                    <div class="invalid-feedback">Введите Ваш e-mail</div>
-                </div>
-                <button type="button" class="form-subscribe__btn btn-primary btn">Подписаться на рассылку</button>
-            </form>
-        </div>
-        <div class="footer-info">
-            <div class="footer-contact">
-                <div>Телефон приёмной комиссии:</div>
-                <a href="tel:+74952011300" class="footer-contact__phone" rel="nofollow">+7 (495) 201-13-00</a>
-            </div>
-            <div class="footer-contact">
-                <div>Телефон по административным вопросам:</div>
-                <a href="tel:+79258066003" class="footer-contact__phone" rel="nofollow">+7 925 806-60-03</a>
-            </div>
-            <div class="footer-pay">
-                <div class="footer-pay__text">Онлайн оплата курсов за обучение:</div>
-                <a href="#" class="footer-pay__card" rel="nofollow">
-                    <img src="img/pay/mir.svg" class="footer-pay__mir" alt="Платежная карта МИР">
-                    <img src="img/pay/visa.svg" class="footer-pay__visa" alt="Платежная карта Visa">
-                    <span class="footer-pay__mastercard">
-                        <img src="img/pay/mastercard.svg" class="footer-pay__mastercard-media" alt="Платежная карта MasterCard">
-                        mastercard
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="footer-copy">©2020 ФГБОУ ВО РГУ им. А.Н. Косыгина | Наш адрес: г. Москва,ул. Садовническая, д. 33, стр.1, ауд. №214</div>
-    </footer>
-</div>
-
-
-<script src="js/scripts.min.js"></script>
-
-</body>
-</html>
+@@include("blocks/count.html")
+@@include("blocks/footer.html")
