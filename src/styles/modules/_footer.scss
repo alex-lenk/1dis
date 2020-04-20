@@ -59,7 +59,6 @@
 }
 
 .form-subscribe__btn {
-  font-size: 14px;
   font-weight: 700;
   margin-left: -2px;
   position: relative;
@@ -115,6 +114,12 @@
   font-size: 14px;
 }
 
+@media (min-width: 576px) {
+  .form-subscribe__btn {
+    font-size: 14px;
+  }
+}
+
 @media (min-width: 768px) {
   .footer-top {
     padding-bottom: 30px;
@@ -166,5 +171,27 @@
   .footer-pay {
     margin-bottom: 30px;
     padding-top: 15px
+  }
+}
+
+@media (max-width: 576px) {
+  .form-subscribe {
+    .form-group-prepend__field {
+      border-color: $orange;
+      padding-left: .75rem;
+    }
+
+    .form-group-prepend__icon {
+      display: none;
+    }
+  }
+  .form-subscribe__btn {
+    font-size: 13px;
+    text-transform: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 160px;
+    background-color: $orange;
+    border: 1px solid $orange;
   }
 }

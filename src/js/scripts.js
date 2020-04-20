@@ -2,9 +2,9 @@
 // = vendor/jquery.maskedinput.min.js
 //= vendor/glider.min.js
 
-function clickHeaderToggle() {
+/*function clickHeaderToggle() {
     document.querySelector('body').classList.toggle('menu-opened');
-}
+}*/
 
 new Glider(document.querySelector('.main-info-slider__init'), {
     slidesToShow: 1,
@@ -17,8 +17,35 @@ new Glider(document.querySelector('.main-info-slider__init'), {
     }
 });
 
+
+let hamburger = document.querySelector('.header-toggle'),
+    menu = document.querySelector('.nav-wrap'),
+    bodyElement = document.querySelector('body');
+
+const toggleMenu = () => {
+    bodyElement.classList.toggle('menu-opened');
+};
+
+hamburger.addEventListener('click', e => {
+    e.stopPropagation();
+
+    toggleMenu();
+});
+
+document.addEventListener('click', e => {
+    let target = e.target;
+    let its_menu = target === menu || menu.contains(target);
+    let its_hamburger = target === hamburger;
+    let menu_is_active = bodyElement.classList.contains('menu-opened');
+
+    if (!its_menu && !its_hamburger && menu_is_active) {
+        toggleMenu();
+    }
+});
+
+
 window.addEventListener("DOMContentLoaded", function () {
-    document.querySelector('.header-toggle').addEventListener("click", clickHeaderToggle);
+    //document.querySelector('.header-toggle').addEventListener("click", clickHeaderToggle);
 
 
     [].forEach.call(document.querySelectorAll('.tel'), function (input) {
