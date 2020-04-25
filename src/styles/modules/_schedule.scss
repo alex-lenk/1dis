@@ -1,0 +1,41 @@
+.schedule {
+  margin-bottom: 30px;
+}
+
+.schedule-box {
+  padding: 15px 20px 15px;
+  background-color: #efefef;
+}
+
+.schedule-box__title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.schedule-box__text {
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.schedule-box__bottom {
+  font-weight: 700;
+  padding-top: 10px;
+  border-top: 1px solid #fff;
+}
+
+.schedule-box__dist {
+  a {
+    display: block;
+    transition: color .4s;
+  }
+
+  .schedule-box__title {
+    text-align: left;
+  }
+
+  .schedule-box__bottom {
+    text-align: center;
+  }
+}

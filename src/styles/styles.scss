@@ -7,13 +7,26 @@
 @import "base/forms";
 @import "base/button";
 @import "base/custom-control";
+@import "base/table";
 @import "modules/header";
 @import "modules/menu";
 @import "modules/main-info";
 @import "modules/services";
 @import "modules/footer";
+/* for page */
+@import "modules/breadcrumb";
+@import "modules/page-info";
+@import "modules/schedule";
+@import "modules/info-links";
+@import "modules/video-section";
 
 .content {
   padding: 15px 15px 5px;
   background-color: #fff;
+}
+
+.content-text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 18px;
 }

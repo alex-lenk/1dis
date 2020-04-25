@@ -1,0 +1,39 @@
+.page-info {
+  margin-bottom: 30px;
+  padding: 10px 20px 15px;
+  background-color: #efefef;
+  font-size: 18px;
+}
+
+.aside-title {
+  padding-top: 19px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.page-info__title {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.page-info-box {
+  margin-bottom: 34px;
+
+  a {
+    border-bottom: 1px solid;
+    color: inherit;
+    transition: color .4s, border-bottom-color .4s;
+
+    &:hover {
+      color: $orange;
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+.page-info-box__title {
+  margin-bottom: 2px;
+}
