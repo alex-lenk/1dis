@@ -20,3 +20,9 @@
 @import "modules/schedule";
 @import "modules/info-links";
 @import "modules/video-section";
+
+@media (min-width: 576px) {
+  .show-xs {
+    display: none;
+  }
+}

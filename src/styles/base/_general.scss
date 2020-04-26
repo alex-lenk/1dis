@@ -4,6 +4,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
+  margin-bottom: 20px;
   font-size: 26px;
 }
 
@@ -98,7 +99,6 @@ a:focus {
   }
 }
 
-
 @media (min-width: 576px) {
   body {
     background: url(../img/bg.svg) repeat #efefef;
@@ -124,5 +124,12 @@ a:focus {
 
   h4, .h4 {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .list-check-item,
+  .squared-list-item {
+    line-height: 1.4
   }
 }

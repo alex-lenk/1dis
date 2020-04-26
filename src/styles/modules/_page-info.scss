@@ -1,25 +1,27 @@
 .page-info {
   margin-bottom: 30px;
-  padding: 10px 20px 15px;
   background-color: #efefef;
-  font-size: 18px;
 }
 
 .page-info__title {
   margin-bottom: 6px;
-  font-size: 18px;
 }
 
-.page-info-box {
-  a {
-    border-bottom: 1px solid;
-    color: inherit;
-    transition: color .4s, border-bottom-color .4s;
+.page-info-box a {
+  border-bottom: 1px solid;
+  color: inherit;
+  transition: color .4s, border-bottom-color .4s;
 
-    &:hover {
-      color: $orange;
-      border-bottom-color: transparent;
-    }
+  &:hover {
+    color: $orange;
+    border-bottom-color: transparent;
+  }
+}
+
+@media (min-width: 576px) {
+  .page-info {
+    padding: 10px 20px 15px;
+    font-size: 18px;
   }
 }
 
@@ -50,5 +52,16 @@
 @media (max-width: 991px) {
   .page-info-box .list-check {
     margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .page-info {
+    padding: 14px 14px 14px;
+    margin-left: -14px;
+    margin-right: -14px
+  }
+  .page-info__title {
+    line-height: 1.4;
   }
 }

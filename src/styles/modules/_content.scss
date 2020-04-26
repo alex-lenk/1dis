@@ -1,7 +1,6 @@
 .content-text {
   margin-bottom: 20px;
   font-weight: 700;
-  font-size: 18px;
 }
 
 .content-aside {
@@ -66,6 +65,9 @@
     padding: 15px 15px 5px;
     background-color: #fff;
   }
+  .content-text {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -87,15 +89,23 @@
 }
 
 @media (max-width: 991px) {
-  .content-aside {
-    margin-bottom: 30px;
-
-    .services {
-      display: none;
-    }
+  .content-aside .services {
+    display: none;
   }
   .content-aside__title {
     display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .content-aside {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .content-aside {
+    margin-bottom: 30px;
   }
 }
 

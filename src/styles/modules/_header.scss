@@ -1,5 +1,4 @@
 .header {
-  padding-top: 16px;
   padding-bottom: 15px;
 }
 
@@ -10,8 +9,8 @@
 }
 
 .header-logo__title {
-  margin-bottom: 5px;
   line-height: 1;
+  display: block;
 }
 
 .header-logo__text {
@@ -33,6 +32,13 @@
 
 .header-support__contact-address {
   font-size: 13px;
+}
+
+.header-support__contact-icon {
+  width: 20px;
+  height: 18px;
+  fill: #fff;
+  margin-right: 8px;
 }
 
 .header-social {
@@ -103,6 +109,9 @@
 }
 
 @media (min-width: 576px) {
+  .header {
+    padding-top: 16px;
+  }
   .header-logo {
     height: 82px;
     display: flex;
@@ -113,6 +122,9 @@
     &:hover {
       text-decoration: none;
     }
+  }
+  .header-logo__title {
+    margin-bottom: 5px;
   }
 }
 
@@ -141,6 +153,7 @@
     color: $gray-900;
     transition: color .4s;
   }
+  .header-support__contact-icon,
   .header-toggle {
     display: none;
   }
@@ -221,19 +234,27 @@
 }
 
 @media (max-width: 575px) {
+  .header {
+    padding-top: 9px;
+  }
   .header-logo {
     margin-bottom: 15px;
     display: block;
     @include clearfix;
   }
   .header-logo__title {
-    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
   }
   .header-logo__media {
     float: left;
   }
   .header-logo__text br {
     display: none;
+  }
+  .header-info {
+    margin-left: -14px;
+    margin-right: -14px;
   }
 }
 
