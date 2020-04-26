@@ -13,3 +13,9 @@
 .info-links-item {
   font-size: 13px;
 }
+
+@media (max-width: 991px) {
+  .info-links-item {
+    margin-bottom: 15px;
+  }
+}

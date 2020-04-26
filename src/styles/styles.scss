@@ -15,18 +15,8 @@
 @import "modules/footer";
 /* for page */
 @import "modules/breadcrumb";
+@import "modules/content";
 @import "modules/page-info";
 @import "modules/schedule";
 @import "modules/info-links";
 @import "modules/video-section";
-
-.content {
-  padding: 15px 15px 5px;
-  background-color: #fff;
-}
-
-.content-text {
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 18px;
-}

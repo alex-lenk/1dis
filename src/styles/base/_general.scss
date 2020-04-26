@@ -1,7 +1,3 @@
-body {
-  background: url(../img/bg.svg) repeat #efefef;
-}
-
 h1, .h1, h2, .h2, h3, .h3,
 h4, .h4, h5, .h5, h6, .h6 {
   line-height: 1.3;
@@ -104,6 +100,10 @@ a:focus {
 
 
 @media (min-width: 576px) {
+  body {
+    background: url(../img/bg.svg) repeat #efefef;
+  }
+
   h1, .h1, h2, .h2, h3, .h3,
   h4, .h4, h5, .h5, h6, .h6 {
     margin-bottom: .8rem;

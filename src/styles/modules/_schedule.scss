@@ -1,9 +1,5 @@
-.schedule {
-  margin-bottom: 30px;
-}
-
 .schedule-box {
-  padding: 15px 20px 15px;
+  padding: 15px 20px;
   background-color: #efefef;
 }
 
@@ -37,5 +33,35 @@
 
   .schedule-box__bottom {
     text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .schedule {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .schedule {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    .col-lg-3 {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+  .schedule-box {
+    padding: 10px;
+  }
+  .schedule-box__dist .schedule-box__title {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 991px) {
+  .schedule-box {
+    margin-bottom: 30px;
   }
 }
