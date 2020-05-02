@@ -1,10 +1,6 @@
-// = vendor/jquery-3.5.0.slim.min.js
-// = vendor/jquery.maskedinput.min.js
 //= vendor/glider.min.js
+//= vendor/baguetteBox.min.js
 
-/*function clickHeaderToggle() {
-    document.querySelector('body').classList.toggle('menu-opened');
-}*/
 var mainInfoSliderInit = document.querySelector('.main-info-slider__init');
 
 if (mainInfoSliderInit) {
@@ -20,7 +16,7 @@ if (mainInfoSliderInit) {
     });
 }
 
-
+/* BEGIN: Добавленеи классов для открытий и закрытия меню на мобильном */
 let hamburger = document.querySelector('.header-toggle'),
     menu = document.querySelector('.nav-wrap'),
     bodyElement = document.querySelector('body');
@@ -45,12 +41,11 @@ document.addEventListener('click', e => {
         toggleMenu();
     }
 });
+/* END: Добавленеи классов для открытий и закрытия меню на мобильном */
 
 
+/* BEGIN: Маска для ипут поля телефона */
 window.addEventListener("DOMContentLoaded", function () {
-    //document.querySelector('.header-toggle').addEventListener("click", clickHeaderToggle);
-
-
     [].forEach.call(document.querySelectorAll('.tel'), function (input) {
         var keyCode;
 
@@ -85,8 +80,10 @@ window.addEventListener("DOMContentLoaded", function () {
         input.addEventListener("keydown", mask, false)
     });
 });
+/* END: Маска для ипут поля телефона */
 
 
+/* BEGIN: Функции плавных анимаций открытия и закрытия панелей */
 let slideUp = (target, duration = 500) => {
     target.style.transitionProperty = 'height, margin, padding';
     target.style.transitionDuration = duration + 'ms';
@@ -152,6 +149,7 @@ var slideToggle = (target, duration = 500) => {
         return slideUp(target, duration);
     }
 }
+
 var contentAsideToggle = document.querySelector('.content-aside__toggle');
 
 if (contentAsideToggle) {
@@ -160,3 +158,117 @@ if (contentAsideToggle) {
         contentAsideToggle.classList.toggle('content-aside__toggle-open');
     });
 }
+/* END: Функции плавных анимаций открытия и закрытия панелей */
+
+
+/* BEGIN: Плавная прокрутка к якорю */
+const anchors = document.querySelectorAll('.go-anchor')
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        const blockID = anchor.getAttribute('href').substr(1)
+
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+}
+/* END: Плавная прокрутка к якорю */
+
+
+
+/*
+* BEGIN: Модальные окна
+* https://dev-postnov.ru/modal-on-javascript/
+* https://codepen.io/dan_postnov/pen/gjBqPb
+*/
+
+!function (e) {
+    "function" != typeof e.matches && (e.matches = e.msMatchesSelector || e.mozMatchesSelector || e.webkitMatchesSelector || function (e) {
+        for (var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0; o[n] && o[n] !== t;) ++n;
+        return Boolean(o[n])
+    });
+    "function" != typeof e.closest && (e.closest = function (e) {
+        for (var t = this; t && 1 === t.nodeType;) {
+            if (t.matches(e)) return t;
+            t = t.parentNode
+        }
+        return null
+    })
+}(window.Element.prototype);
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    /* Записываем в переменные массив элементов-кнопок и подложку.
+       Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
+    var modalButtons = document.querySelectorAll('.js-open-modal'),
+        overlay = document.querySelector('.js-overlay-modal'),
+        closeButtons = document.querySelectorAll('.js-modal-close');
+
+
+    /* Перебираем массив кнопок */
+    modalButtons.forEach(function (item) {
+
+        /* Назначаем каждой кнопке обработчик клика */
+        item.addEventListener('click', function (e) {
+
+            /* Предотвращаем стандартное действие элемента. Так как кнопку разные
+               люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
+               Нужно подстраховаться. */
+            e.preventDefault();
+
+            /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+               и будем искать модальное окно с таким же атрибутом. */
+            var modalId = this.getAttribute('data-modal'),
+                modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+
+
+            /* После того как нашли нужное модальное окно, добавим классы
+               подложке и окну чтобы показать их. */
+            modalElem.classList.add('active');
+            overlay.classList.add('active');
+        }); // end click
+
+    }); // end foreach
+
+
+    closeButtons.forEach(function (item) {
+
+        item.addEventListener('click', function (e) {
+            var parentModal = this.closest('.modal');
+
+            parentModal.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+    }); // end foreach
+
+
+    document.body.addEventListener('keyup', function (e) {
+        var key = e.keyCode;
+
+        if (key === 27) {
+
+            document.querySelector('.modal.active').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        }
+    }, false);
+
+
+    overlay.addEventListener('click', function () {
+        document.querySelector('.modal.active').classList.remove('active');
+        this.classList.remove('active');
+    });
+
+
+}); // end ready
+
+/* END: Модальные окна */
+
+
+window.addEventListener('load', function () {
+    baguetteBox.run('.gallery');
+});

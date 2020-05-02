@@ -3,6 +3,7 @@
 @import "base/fonts";
 @import "vendor/bootstrap";
 @import "vendor/glider";
+@import "vendor/baguetteBox.min";
 @import "base/general";
 @import "base/forms";
 @import "base/button";
@@ -20,6 +21,96 @@
 @import "modules/schedule";
 @import "modules/info-links";
 @import "modules/video-section";
+@import "modules/modal";
+
+.mc {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px dashed;
+  display: flex;
+}
+
+.mc1 {
+  color: $orange;
+}
+
+.gallery {
+  margin: 0 -7px 15px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    padding: 0 7px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mc {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .mc1 {
+    padding: 0 10px;
+    max-width: 100%;
+    flex-basis: 100%;
+
+    br {
+      display: none;
+    }
+  }
+  .mc2 {
+    padding: 0 10px;
+  }
+  .mc3 {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mc1 {
+    padding: 15px;
+    max-width: 100px;
+    flex-basis: 100px;
+  }
+
+  .mc2 {
+    padding: 0 30px;
+  }
+
+  .mc3 {
+    flex: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .pltk li,
+  .gallery a,
+  .dipl div,
+  .otzyv li {
+    width: calc(100% / 6);
+  }
+}
+
+@media (max-width: 767px) {
+  .pltk li,
+  .gallery a,
+  .dipl div,
+  .otzyv li {
+    width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .pltk li,
+  .gallery a,
+  .dipl div,
+  .otzyv li {
+    width: calc(100% / 4);
+  }
+}
 
 @media (min-width: 576px) {
   .show-xs {

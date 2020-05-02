@@ -63,6 +63,56 @@
 </div>
 
 
+<div class="modal" data-modal="1">
+    <div class="modal-title h3">Зипишитесь на курсы</div>
+
+    <form action="/" method="post" class="">
+        <div class="form-group-prepend form-group">
+            <label class="sr-only" for="call-form__name">Ваше имя</label>
+            <svg class="form-group-prepend__icon">
+                <use xlink:href="img/icons.svg#user"></use>
+            </svg>
+            <input type="text" id="call-form__name" class="form-group-prepend__field form-control hide-placeholder" placeholder="Представтесь" required="">
+            <div class="invalid-feedback">Введите ваше имя</div>
+        </div>
+
+        <div class="form-group-prepend form-group">
+            <label class="sr-only" for="call-form__email2">Ваш e-mail</label>
+            <svg class="form-group-prepend__icon">
+                <use xlink:href="img/icons.svg#email"></use>
+            </svg>
+            <input type="email" id="call-form__email2" class="form-group-prepend__field form-control hide-placeholder"
+                   placeholder="Ваш e-mail" required="">
+            <div class="invalid-feedback">Введите ваш email</div>
+        </div>
+
+        <div class="form-group-prepend form-group">
+            <label class="sr-only" for="call-form__tel">Контактный телефон*</label>
+            <svg class="form-group-prepend__icon">
+                <use xlink:href="img/icons.svg#phone"></use>
+            </svg>
+            <input type="tel" id="call-form__tel" class="form-group-prepend__field form-control hide-placeholder tel" placeholder="+7 (___) ___-__-__" required="">
+            <div class="invalid-feedback">Заполните номер телефона</div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn-secondary btn">Отправить сообщение</button>
+        </div>
+
+        <div class="modal-small">
+            Нажимая кнопку, вы даете согласие на обработку персональных данных
+        </div>
+
+        <div class="modal-small"><span style="color: red;">*</span> поля, обязательные для заполнения</div>
+    </form>
+
+    <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+    </svg>
+</div>
+
+<div class="overlay js-overlay-modal"></div>
+
 <script src="js/scripts.min.js"></script>
 </body>
 </html>

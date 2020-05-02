@@ -12,7 +12,8 @@ var gulp = require('gulp'),
     basePath = require('path'),
     svgmin = require('gulp-svgmin'),
     svgstore = require('gulp-svgstore'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    ftp = require('vinyl-ftp');
 
 const paths = {
     html: {
@@ -155,4 +156,21 @@ gulp.task('watch', function () {
     gulp.watch(paths.fonts.watch, gulp.parallel('fonts'));
 });
 
-gulp.task('default', gulp.parallel('img', 'favicon', 'fonts', 'styles', 'scripts', 'code', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('styles', 'scripts', 'code', 'browser-sync', 'watch'));
+
+
+gulp.task('deploy', function () {
+    var conn = ftp.create({
+        host: 'palmid.beget.tech',
+        user: 'palmid_deploy1dis',
+        password: 'R&oIvKxq1%TPtP1n',
+        parallel: 10
+    });
+
+    var globs = [
+        'build/**'
+    ];
+    return gulp.src(globs, {buffer: false})
+        .pipe(conn.dest('/'));
+
+});
